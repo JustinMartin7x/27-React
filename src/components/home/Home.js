@@ -20,9 +20,9 @@ export default function Home({ character, setCharacter }) {
       <div className='banner'> RICK AND MORTY WUBBA LUBBA DUB DUB</div>
       <ul>
         {characters.length ? (
-          characters.map((item) => (
+          characters.map((item, key) => (
             <li>
-              <ListItem item={item} setCharacter={setCharacter} />
+              <ListItem item={item} setCharacter={setCharacter} key={item.id} />
             </li>
           ))
         ) : (

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 export default function ListItem({ item, setCharacter }) {
@@ -12,3 +13,7 @@ export default function ListItem({ item, setCharacter }) {
     </Link>
   );
 }
+ListItem.PropTypes = {
+  item: PropTypes.object,
+  setCharacter: PropTypes.func,
+};
