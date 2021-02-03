@@ -5,6 +5,6 @@ export const getList = () => {
 };
 export const getCharacter = (id) => {
   return fetch(`https://rickandmortyapi.com/api/character/${id}`).then((data) =>
-    console.log(data.json())
+    data.json()
   );
 };

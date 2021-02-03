@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 export default function DetailPage({ character }) {
@@ -10,8 +11,12 @@ export default function DetailPage({ character }) {
       <p>Gender: {character.gender}</p>
       <p>Species: {character.species}</p>
       {character.episode.map((item) => (
-        <p>{item}</p>
+        <p key={item + Date.now()}>{item}</p>
       ))}
     </div>
   );
 }
+
+DetailPage.propTypes = {
+  character: PropTypes.object.isRequired,
+};

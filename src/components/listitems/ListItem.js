@@ -13,7 +13,8 @@ export default function ListItem({ item, setCharacter }) {
     </Link>
   );
 }
-ListItem.PropTypes = {
-  item: PropTypes.object,
-  setCharacter: PropTypes.func,
+
+ListItem.propTypes = {
+  item: PropTypes.object.isRequired,
+  setCharacter: PropTypes.func.isRequired,
 };
